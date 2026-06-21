@@ -1,0 +1,34 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5001/api
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/careeriq
+      - JWT_SECRET=careeriq-dev-secret-change-in-production
+      - JWT_REFRESH_SECRET=careeriq-dev-refresh-secret
+      - HF_TOKEN=${HF_TOKEN}
+      - HF_MODEL=meta-llama/Llama-3.2-1B-Instruct
+      - FRONTEND_URL=http://localhost:3000
+      - PORT=5001
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
