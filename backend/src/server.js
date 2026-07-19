@@ -24,16 +24,13 @@ import resumeBuilderRoutes from './routes/resumeBuilder.routes.js';
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// CORS configuration - support multiple origins
 const allowedOrigins = process.env.FRONTEND_URL
   ? process.env.FRONTEND_URL.split(',').map(origin => origin.trim())
   : ['http://localhost:3000'];
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl, Postman)
     if (!origin) return callback(null, true);
-
     if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
