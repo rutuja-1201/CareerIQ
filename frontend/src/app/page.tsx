@@ -36,7 +36,7 @@ export default function HomePage() {
           <br className="hidden sm:block" /> for developers
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 md:text-xl">
-          Team <strong className="text-white">Bytebrains</strong> presents CareerIQ — talk to Career Twin AI,
+          CareerIQ — talk to Career Twin AI,
           connect GitHub + resume, and get a personalized path to your dream role.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -132,8 +132,8 @@ export default function HomePage() {
       </section>
 
       <footer className="relative z-10 border-t border-white/5 py-10 text-center">
-        <p className="text-sm font-semibold text-slate-300">Team Bytebrains</p>
-        <p className="mt-1 text-xs text-slate-500">CareerIQ — AI Career Operating System for Developers</p>
+        <p className="text-sm font-semibold text-slate-300">CareerIQ</p>
+        <p className="mt-1 text-xs text-slate-500">AI Career Operating System for Developers</p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-400">
           {["Resume", "GitHub", "Skill Gap", "Roadmap", "Salary", "Interviews"].map((i) => (
             <span key={i} className="flex items-center gap-1">

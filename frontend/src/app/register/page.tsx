@@ -48,7 +48,7 @@ export default function RegisterPage() {
     <AuthShell>
       <div>
         <h2 className="text-2xl font-bold text-white">Create account</h2>
-        <p className="mt-1 text-sm text-slate-400">Join CareerIQ by Team Bytebrains</p>
+        <p className="mt-1 text-sm text-slate-400">Join CareerIQ</p>
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>
             <Label htmlFor="name">Full name</Label>

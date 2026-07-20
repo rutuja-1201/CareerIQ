@@ -66,7 +66,7 @@ export default function DashboardPage() {
             <div className="grid gap-4 lg:grid-cols-2">
               <div className="flex flex-col gap-4 rounded-2xl border border-violet-500/20 bg-gradient-to-r from-violet-600 to-indigo-600 p-6 text-white sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm text-violet-200">Career Twin AI · Bytebrains</p>
+                  <p className="text-sm text-violet-200">Career Twin AI</p>
                   <h2 className="text-xl font-bold">Ask in plain English</h2>
                   <p className="mt-1 text-sm text-violet-100">&ldquo;Senior Full Stack Engineer in 12 months&rdquo; → plan in seconds</p>
                 </div>

@@ -14,7 +14,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
             Your AI career <span className="gradient-text">operating system</span>
           </h2>
           <p className="max-w-sm text-slate-400">
-            Built by Team Bytebrains for developers who want clarity — not another generic ATS score.
+            Built for developers who want clarity — not another generic ATS score.
           </p>
           <ul className="space-y-4">
             {[

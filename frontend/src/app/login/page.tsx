@@ -47,7 +47,7 @@ export default function LoginPage() {
     <AuthShell>
       <div>
         <h2 className="text-2xl font-bold text-white">Welcome back</h2>
-        <p className="mt-1 text-sm text-slate-400">Sign in to CareerIQ by Bytebrains</p>
+        <p className="mt-1 text-sm text-slate-400">Sign in to CareerIQ</p>
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>
             <Label htmlFor="email">Email</Label>

@@ -7,8 +7,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CareerIQ by Bytebrains – AI Career Operating System",
-  description: "Team Bytebrains presents CareerIQ — Career Twin AI, resume & GitHub intelligence, skill gaps, roadmaps, and salary simulation for developers.",
+  title: "CareerIQ – AI Career Operating System",
+  description: "CareerIQ — Career Twin AI, resume & GitHub intelligence, skill gaps, roadmaps, and salary simulation for developers.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

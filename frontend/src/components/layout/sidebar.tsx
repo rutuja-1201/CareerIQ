@@ -41,7 +41,7 @@ export function Sidebar() {
             <p className="text-base font-bold text-white">
               Career<span className="text-indigo-400">IQ</span>
             </p>
-            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-500">Bytebrains</p>
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-500">AI Career OS</p>
           </div>
         </Link>
       </div>
@@ -104,7 +104,7 @@ export function DashboardLayout({ children, title }: { children: React.ReactNode
       <div className="pl-[260px]">
         <header className="sticky top-0 z-30 flex h-[4.25rem] items-center justify-between border-b border-white/[0.06] bg-[#070b14]/90 px-8 backdrop-blur-xl">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-indigo-400">Bytebrains</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-indigo-400">CareerIQ</p>
             <h1 className="text-lg font-bold text-white">{title}</h1>
           </div>
           <div className="flex items-center gap-3">

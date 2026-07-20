@@ -175,7 +175,7 @@ export default function CareerTwinPage() {
     <AuthGuard>
       <DashboardLayout title="Career Twin AI">
         <PageHero
-          eyebrow="Team Bytebrains · Hero feature"
+          eyebrow="Hero feature"
           title="Career Twin AI"
           description="Your autonomous career agent — parse goals in plain English, analyze skills, and generate a week-by-week roadmap."
         >
