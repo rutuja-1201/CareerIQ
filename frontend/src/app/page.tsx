@@ -88,7 +88,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold md:text-4xl">Everything in one platform</h2>
-            <p className="mt-3 text-slate-400">Built for HackIndia · designed to win on demo day</p>
+            <p className="mt-3 text-slate-400">Built for developers who want to level up their careers</p>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map(({ icon: Icon, title, desc, featured }) => (
@@ -120,7 +120,7 @@ export default function HomePage() {
           </div>
           <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-center">
             <Sparkles className="mx-auto h-8 w-8 text-cyan-400" />
-            <h3 className="mt-4 text-xl font-bold">Ready for your demo?</h3>
+            <h3 className="mt-4 text-xl font-bold">Ready to get started?</h3>
             <p className="mt-2 text-slate-400">Open Career Twin AI and run the example prompt in under 60 seconds.</p>
             <Link href="/register" className="mt-6 inline-block">
               <Button size="lg" className="btn-glow gap-2">

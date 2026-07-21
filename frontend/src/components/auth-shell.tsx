@@ -32,7 +32,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
           </ul>
         </div>
         <p className="relative z-10 flex items-center gap-2 text-xs text-slate-500">
-          <Sparkles className="h-3 w-3 text-cyan-400" /> HackIndia Vibe Coding 2026
+          <Sparkles className="h-3 w-3 text-cyan-400" /> AI-Powered Career Intelligence
         </p>
       </div>
       <div className="mesh-bg flex flex-1 flex-col items-center justify-center p-6 lg:p-12">
