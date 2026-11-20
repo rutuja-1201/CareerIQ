@@ -35,7 +35,7 @@ export function BrandMark({
         </p>
         {showTeam && (
           <p className={cn("text-[10px] font-medium uppercase tracking-widest", dark ? "text-indigo-300/80" : "text-slate-400")}>
-            AI Career OS
+            by Bytebrains
           </p>
         )}
       </div>
@@ -51,7 +51,7 @@ export function TeamBadge({ className }: { className?: string }) {
         className
       )}
     >
-      AI Career OS
+      Team Bytebrains
     </span>
   );
 }
