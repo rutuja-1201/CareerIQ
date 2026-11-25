@@ -10,27 +10,6 @@ const getConfig = () => {
   };
 };
 
-// Fallback responses when AI fails (demo safety net)
-const FALLBACKS = {
-  resumeAnalysis: {
-    atsScore: 75,
-    resumeQuality: 'Good',
-    missingKeywords: ['Docker', 'Kubernetes', 'AWS'],
-    strengths: ['Strong technical skills', 'Clear project descriptions'],
-    weakBullets: [
-      { before: 'Developed web applications', after: 'Architected and deployed scalable web applications serving 10K+ users, improving performance by 40%' }
-    ],
-    feedback: 'Your resume demonstrates solid technical foundation. Consider adding cloud and DevOps skills for senior roles.'
-  },
-  careerTwinReply: "I'm analyzing your career goal right now. Based on typical patterns for this role, you'll need to focus on strengthening your technical skills and gaining experience with modern tools. Let's create a focused learning plan to get you there!",
-  learningRoadmap: [
-    { week: 1, skill: 'Docker', focus: 'Container fundamentals and Dockerfile creation', resources: ['Docker official docs', 'Docker Mastery course'] },
-    { week: 2, skill: 'Kubernetes', focus: 'K8s basics and deployment', resources: ['Kubernetes.io tutorials'] },
-    { week: 3, skill: 'AWS', focus: 'Cloud services (EC2, S3, Lambda)', resources: ['AWS Getting Started'] },
-    { week: 4, skill: 'System Design', focus: 'Scalability patterns', resources: ['System Design Primer'] }
-  ]
-};
-
 const parseJSON = (text) => {
   const cleaned = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
   try {
@@ -106,8 +85,7 @@ const chat = async (userPrompt, systemPrompt = 'You are a helpful assistant. Res
 };
 
 export const analyzeResumeWithAI = async (resumeText, jdText = '') => {
-  try {
-    const prompt = `Analyze this resume${jdText ? ' against the job description' : ''}.
+  const prompt = `Analyze this resume${jdText ? ' against the job description' : ''}.
 
 Resume:
 ${resumeText.slice(0, 6000)}
@@ -126,11 +104,8 @@ Return ONLY valid JSON:
   "feedback": "2-3 sentence actionable feedback"
 }`;
 
-    return parseJSON(await chat(prompt, 'You are an expert ATS resume analyzer. Return ONLY valid JSON.'));
-  } catch (error) {
-    console.error('AI resume analysis failed, using fallback:', error.message);
-    return FALLBACKS.resumeAnalysis;
-  }
+  // Throw error on failure so caller can use algorithmic fallback
+  return parseJSON(await chat(prompt, 'You are an expert ATS resume analyzer. Return ONLY valid JSON.'));
 };
 
 export const extractJDSkillsWithAI = async (jdText) => {
